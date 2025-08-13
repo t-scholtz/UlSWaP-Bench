@@ -26,7 +26,7 @@ __ram         = 0x00029FF0;
 __ram_size    = 0x00008000;
 __stack_size  = 0xC00;
 
-INCLUDE /home/harrison/ti/msp430-gcc/include/msp430fr5994_symbols.ld
+INCLUDE /home/tjscholtz/ti/msp430-gcc/include/msp430fr5994_symbols.ld
 
 /*  Need to define a bunch of stuff missing from
  *  picolibc boilerplate linker script

@@ -74,9 +74,9 @@ void run_arch_startup(){
   __bis_SR_register(GIE);
 }
 
-void print_hexstring(uint32_t num){
-  for (uint32_t i = sizeof(num) * 8; i > 0; i -= 4){
-    uint8_t nibble = (num >> (i - 4)) & 0xF;
+void print_hexstring(unsigned int num){
+  for (unsigned int i = sizeof(num) * 8; i > 0; i -= 4){
+    char nibble = (num >> (i - 4)) & 0xF;
     if (nibble > 9){
       sendByte(nibble + 0x37, NULL);
     }else{
@@ -85,13 +85,13 @@ void print_hexstring(uint32_t num){
   }
 }
 
-void hexstring(uint32_t num){
+void hexstring(unsigned int num){
   print_hexstring(num);
   sendByte('\r', NULL);
   sendByte('\n', NULL);
 }
 
-void hexstrings(uint32_t num){
+void hexstrings(unsigned int num){
   print_hexstring(num);
   sendByte(' ', NULL);
 }
