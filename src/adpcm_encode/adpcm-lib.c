@@ -403,7 +403,7 @@ int adpcm_encode_block(void *p, uint8_t *outbuf, size_t *outbufsize, const int16
         {
             rms_error_t min_error = MAX_RMS_ERROR;
             rms_error_t error_per_index[89];
-            int best_index;
+            int best_index=-1;
 
             if (depth < 3) // don't use a lower depth than 3 for this
                 depth = 3;

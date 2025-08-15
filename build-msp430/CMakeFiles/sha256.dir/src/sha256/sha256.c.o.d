@@ -1,0 +1,23 @@
+CMakeFiles/sha256.dir/src/sha256/sha256.c.o: \
+ /home/tjscholtz/Desktop/UlSWaP-Bench/src/sha256/sha256.c \
+ /home/tjscholtz/picolibc/install-msp430/picolibc/msp430/include/stdint.h \
+ /home/tjscholtz/picolibc/install-msp430/picolibc/msp430/include/sys/cdefs.h \
+ /home/tjscholtz/picolibc/install-msp430/picolibc/msp430/include/sys/config.h \
+ /home/tjscholtz/picolibc/install-msp430/picolibc/msp430/include/machine/ieeefp.h \
+ /home/tjscholtz/picolibc/install-msp430/picolibc/msp430/include/sys/features.h \
+ /home/tjscholtz/picolibc/install-msp430/picolibc/msp430/include/picolibc.h \
+ /home/tjscholtz/picolibc/install-msp430/picolibc/msp430/include/machine/_default_types.h \
+ /home/tjscholtz/picolibc/install-msp430/picolibc/msp430/include/sys/_stdint.h \
+ /home/tjscholtz/picolibc/install-msp430/picolibc/msp430/include/sys/_intsup.h \
+ /home/tjscholtz/picolibc/install-msp430/picolibc/msp430/include/stdlib.h \
+ /home/tjscholtz/ti/msp430-gcc/lib/gcc/msp430-elf/9.3.1/include/stddef.h \
+ /home/tjscholtz/picolibc/install-msp430/picolibc/msp430/include/machine/stdlib.h \
+ /home/tjscholtz/picolibc/install-msp430/picolibc/msp430/include/alloca.h \
+ /home/tjscholtz/picolibc/install-msp430/picolibc/msp430/include/sys/_wait.h \
+ /home/tjscholtz/picolibc/install-msp430/picolibc/msp430/include/string.h \
+ /home/tjscholtz/picolibc/install-msp430/picolibc/msp430/include/sys/_locale.h \
+ /home/tjscholtz/picolibc/install-msp430/picolibc/msp430/include/strings.h \
+ /home/tjscholtz/picolibc/install-msp430/picolibc/msp430/include/sys/_types.h \
+ /home/tjscholtz/picolibc/install-msp430/picolibc/msp430/include/machine/_types.h \
+ /home/tjscholtz/picolibc/install-msp430/picolibc/msp430/include/sys/string.h \
+ /home/tjscholtz/Desktop/UlSWaP-Bench/src/sha256/sha256.h

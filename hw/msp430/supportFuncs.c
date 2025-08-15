@@ -1,111 +1,73 @@
 #include <msp430.h>
 #include <stdio.h>
 #include <stddef.h>
+#include "lib.c"
 
 static int sendByte(char byte, FILE *file);
 
-// Basic clock startup for 8MHz (max freq without FRAM wait states)
 void initClocks(void){
-  // Startup clock system with max DCO setting ~8MHz
-  CSCTL0_H = CSKEY_H;                     // Unlock CS registers
-  CSCTL1 = DCOFSEL_3 | DCORSEL;           // Set DCO to 8MHz
-  CSCTL2 = SELA__VLOCLK | SELS__DCOCLK | SELM__DCOCLK;
-  CSCTL3 = DIVA__1 | DIVS__1 | DIVM__1;   // Set all dividers
-  CSCTL0_H = 0;                           // Lock CS registers
+    // MSP430F1611 uses basic clock module, not CS module
+    // Set DCO to ~8MHz (max for MSP430F1611)
+    DCOCTL = DCO2 | DCO1 | DCO0;           // Max DCO setting
+    BCSCTL1 = RSEL2 | RSEL1 | RSEL0;       // Max range select (RSEL3 doesn't exist on F1611)
+    
+    // Configure clocks:
+    // MCLK = DCO (~8MHz)
+    // SMCLK = DCO (~8MHz) 
+    // ACLK = LFXT1 (32768 Hz, if crystal present)
+    BCSCTL2 = SELM_0 | DIVM_0 | SELS | DIVS_0;
 }
 
-// Basic UART init for output
-void initUart(void){
-  // Configure USCI_A0 GPIOs
-  P2SEL1 |= (BIT0 | BIT1);
-  P2SEL0 &= ~(BIT0 | BIT1);       // USCI_A0 UART operation
-
-  // Configure USCI_A0 for UART mode
-  UCA0CTLW0 = UCSWRST;                    // Put eUSCI in reset
-  UCA0CTLW0 |= UCSSEL__SMCLK;             // CLK = SMCLK
-  // Baud Rate calculation
-  // 8000000/(16*9600) = 52.083
-  // Fractional portion = 0.083
-  // User's Guide Table 21-4: UCBRSx = 0x04
-  // UCBRFx = int ( (52.083-52)*16) = 1
-  UCA0BRW = 52;                           // 8000000/16/9600
-  UCA0MCTLW |= UCOS16 | UCBRF_1 | 0x4900;
-  UCA0CTLW0 &= ~UCSWRST;                  // Initialize eUSCI
-  UCA0IE |= UCRXIE;                       // Enable USCI_A0 RX interrupt
-}
-
-// UART tx interrupt handler
-#if defined(__TI_COMPILER_VERSION__) || defined(__IAR_SYSTEMS_ICC__)
-#pragma vector=EUSCI_A0_VECTOR
-__interrupt void USCI_A0_ISR(void)
-#elif defined(__GNUC__)
-void __attribute__ ((interrupt(EUSCI_A0_VECTOR))) USCI_A0_ISR (void)
-#else
-#error Compiler not supported!
-#endif
-{
-    switch(__even_in_range(UCA0IV, USCI_UART_UCTXCPTIFG))
-    {
-        case USCI_NONE: break;
-        case USCI_UART_UCRXIFG:
-            while(!(UCA0IFG&UCTXIFG));
-            __no_operation();
-            break;
-        case USCI_UART_UCTXIFG: break;
-        case USCI_UART_UCSTTIFG: break;
-        case USCI_UART_UCTXCPTIFG: break;
-        default: break;
-    }
-}
 
 void run_arch_startup(){
-
-  // Stop watchdog
-  WDTCTL = WDTPW | WDTHOLD;
-
-  // Peripheral init
-  initClocks();
-  initUart();
-
-  // Disable GPIO high-z
-  PM5CTL0 &= ~LOCKLPM5;
-
-  // Enable interrupts
-  __bis_SR_register(GIE);
+    // Stop watchdog (already done in assembly, but be safe)
+    WDTCTL = WDTPW | WDTHOLD;
+    
+    // Peripheral init
+    initClocks();
+    
+    // MSP430F1611 doesn't have PM5CTL0 (that's FRAM-specific)
+    // Instead, configure ports as needed:
+    P1DIR = 0x00;  // All inputs by default
+    P2DIR = 0x00;  // All inputs by default  
+    P3DIR = 0x00;  // All inputs by default
+    P4DIR = 0x00;  // All inputs by default
+    P5DIR = 0x00;  // All inputs by default
+    P6DIR = 0x00;  // All inputs by default
+    
+    // Enable interrupts
+    __bis_SR_register(GIE);
 }
 
 void print_hexstring(unsigned int num){
-  for (unsigned int i = sizeof(num) * 8; i > 0; i -= 4){
-    char nibble = (num >> (i - 4)) & 0xF;
-    if (nibble > 9){
-      sendByte(nibble + 0x37, NULL);
-    }else{
-      sendByte(nibble + 0x30, NULL);
+    for (unsigned int i = sizeof(num) * 8; i > 0; i -= 4){
+        char nibble = (num >> (i - 4)) & 0xF;
+        if (nibble > 9){
+            sendByte(nibble + 0x37, NULL);  // 'A'-'F'
+        } else {
+            sendByte(nibble + 0x30, NULL);  // '0'-'9'
+        }
     }
-  }
 }
 
 void hexstring(unsigned int num){
-  print_hexstring(num);
-  sendByte('\r', NULL);
-  sendByte('\n', NULL);
+    print_hexstring(num);
+    sendByte('\r', NULL);
+    sendByte('\n', NULL);
 }
 
 void hexstrings(unsigned int num){
-  print_hexstring(num);
-  sendByte(' ', NULL);
+    print_hexstring(num);
+    sendByte(' ', NULL);
 }
 
-// Set up handles for picolibc stdout
+// Set up handles for picolibc stdout  
 static int sendByte(char byte, FILE *file){
-  (void) file;
-  while(!(UCA0IFG&UCTXIFG));
-  UCA0TXBUF = byte;
-  return byte;
+    putchar_uart(byte);
+    return byte;
 }
 
 static FILE __stdio = FDEV_SETUP_STREAM(sendByte, NULL, NULL, _FDEV_SETUP_WRITE);
 FILE *const stdout = &__stdio;
 __strong_reference(stdout, stdin);
 __strong_reference(stdin, stderr);
-
