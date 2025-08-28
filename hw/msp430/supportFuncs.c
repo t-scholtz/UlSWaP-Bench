@@ -6,37 +6,16 @@
 static int sendByte(char byte, FILE *file);
 
 void initClocks(void){
-    // MSP430F1611 uses basic clock module, not CS module
-    // Set DCO to ~8MHz (max for MSP430F1611)
-    DCOCTL = DCO2 | DCO1 | DCO0;           // Max DCO setting
-    BCSCTL1 = RSEL2 | RSEL1 | RSEL0;       // Max range select (RSEL3 doesn't exist on F1611)
+    // // MSP430F1611 uses basic clock module, not CS module
+    // // Set DCO to ~8MHz (max for MSP430F1611)
+    // DCOCTL = DCO2 | DCO1 | DCO0;           // Max DCO setting
+    // BCSCTL1 = RSEL2 | RSEL1 | RSEL0;       // Max range select (RSEL3 doesn't exist on F1611)
     
-    // Configure clocks:
-    // MCLK = DCO (~8MHz)
-    // SMCLK = DCO (~8MHz) 
-    // ACLK = LFXT1 (32768 Hz, if crystal present)
-    BCSCTL2 = SELM_0 | DIVM_0 | SELS | DIVS_0;
-}
-
-
-void run_arch_startup(){
-    // Stop watchdog (already done in assembly, but be safe)
-    WDTCTL = WDTPW | WDTHOLD;
-    
-    // Peripheral init
-    initClocks();
-    
-    // MSP430F1611 doesn't have PM5CTL0 (that's FRAM-specific)
-    // Instead, configure ports as needed:
-    P1DIR = 0x00;  // All inputs by default
-    P2DIR = 0x00;  // All inputs by default  
-    P3DIR = 0x00;  // All inputs by default
-    P4DIR = 0x00;  // All inputs by default
-    P5DIR = 0x00;  // All inputs by default
-    P6DIR = 0x00;  // All inputs by default
-    
-    // Enable interrupts
-    __bis_SR_register(GIE);
+    // // Configure clocks:
+    // // MCLK = DCO (~8MHz)
+    // // SMCLK = DCO (~8MHz) 
+    // // ACLK = LFXT1 (32768 Hz, if crystal present)
+    // BCSCTL2 = SELM_0 | DIVM_0 | SELS | DIVS_0;
 }
 
 void print_hexstring(unsigned int num){

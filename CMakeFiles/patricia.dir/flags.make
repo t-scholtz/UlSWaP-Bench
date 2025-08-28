@@ -7,11 +7,11 @@ ASM_DEFINES = -DCHECKSUM_TEST=0 -DNO_PRINT=0
 
 ASM_INCLUDES = -I/home/tjscholtz/Desktop/UlSWaP-Bench/src -I/home/tjscholtz/ti/msp430-gcc/include
 
-ASM_FLAGS = -foptimize-sibling-calls -Os -Wall -fno-builtin -ffreestanding -fno-optimize-sibling-calls -fno-builtin-fma -ffp-contract=off -ffunction-sections -mlarge -mdata-region=upper -mmcu=msp430fr5994 -mhwmult=none -specs=picolibc.specs -T/home/tjscholtz/Desktop/UlSWaP-Bench/hw/msp430/memmap.ld -DCUSTOM_ARCH_STARTUP -Wl,--gc-sections
+ASM_FLAGS = -foptimize-sibling-calls -Os -Wall -fno-builtin -ffreestanding -fno-optimize-sibling-calls -fno-builtin-fma -ffp-contract=off -ffunction-sections -mmcu=msp430f1611 -mhwmult=none -specs=picolibc.specs -T/home/tjscholtz/Desktop/UlSWaP-Bench/hw/msp430/memmap.ld -DCUSTOM_ARCH_STARTUP -Wl,--gc-sections
 
 C_DEFINES = -DCHECKSUM_TEST=0 -DNO_PRINT=0
 
 C_INCLUDES = -I/home/tjscholtz/Desktop/UlSWaP-Bench/src -I/home/tjscholtz/ti/msp430-gcc/include
 
-C_FLAGS = -foptimize-sibling-calls -Os -Wall -fno-builtin -ffreestanding -fno-optimize-sibling-calls -fno-builtin-fma -ffp-contract=off -ffunction-sections -mlarge -mdata-region=upper -mmcu=msp430fr5994 -mhwmult=none -specs=picolibc.specs -T/home/tjscholtz/Desktop/UlSWaP-Bench/hw/msp430/memmap.ld -DCUSTOM_ARCH_STARTUP -Wl,--gc-sections
+C_FLAGS = -foptimize-sibling-calls -Os -Wall -fno-builtin -ffreestanding -fno-optimize-sibling-calls -fno-builtin-fma -ffp-contract=off -ffunction-sections -mmcu=msp430f1611 -mhwmult=none -specs=picolibc.specs -T/home/tjscholtz/Desktop/UlSWaP-Bench/hw/msp430/memmap.ld -DCUSTOM_ARCH_STARTUP -Wl,--gc-sections
 

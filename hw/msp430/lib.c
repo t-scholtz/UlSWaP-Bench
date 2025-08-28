@@ -1,5 +1,5 @@
-volatile int * const MMIO_IN = (int *)0xFFD0;
-volatile int * const MMIO_OUT = (int *)0xFFD4;
+volatile int * const MMIO_IN = (int *)0x0002;
+volatile int * const MMIO_OUT = (int *)0x0004;
 
 int getchar_uart(void) {
     return *MMIO_IN;

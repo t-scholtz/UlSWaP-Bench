@@ -117,6 +117,84 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named ALU
+
+# Build rule for target.
+ALU: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ALU
+.PHONY : ALU
+
+# fast build rule for target.
+ALU/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ALU.dir/build.make CMakeFiles/ALU.dir/build
+.PHONY : ALU/fast
+
+#=============================================================================
+# Target rules for targets named BinSearch
+
+# Build rule for target.
+BinSearch: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 BinSearch
+.PHONY : BinSearch
+
+# fast build rule for target.
+BinSearch/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BinSearch.dir/build.make CMakeFiles/BinSearch.dir/build
+.PHONY : BinSearch/fast
+
+#=============================================================================
+# Target rules for targets named Div
+
+# Build rule for target.
+Div: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Div
+.PHONY : Div
+
+# fast build rule for target.
+Div/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Div.dir/build.make CMakeFiles/Div.dir/build
+.PHONY : Div/fast
+
+#=============================================================================
+# Target rules for targets named InSort
+
+# Build rule for target.
+InSort: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 InSort
+.PHONY : InSort
+
+# fast build rule for target.
+InSort/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/InSort.dir/build.make CMakeFiles/InSort.dir/build
+.PHONY : InSort/fast
+
+#=============================================================================
+# Target rules for targets named Mult
+
+# Build rule for target.
+Mult: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Mult
+.PHONY : Mult
+
+# fast build rule for target.
+Mult/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mult.dir/build.make CMakeFiles/Mult.dir/build
+.PHONY : Mult/fast
+
+#=============================================================================
+# Target rules for targets named Tea8
+
+# Build rule for target.
+Tea8: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tea8
+.PHONY : Tea8
+
+# fast build rule for target.
+Tea8/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tea8.dir/build.make CMakeFiles/Tea8.dir/build
+.PHONY : Tea8/fast
+
+#=============================================================================
 # Target rules for targets named activity_rec
 
 # Build rule for target.
@@ -273,6 +351,19 @@ image_class/fast:
 .PHONY : image_class/fast
 
 #=============================================================================
+# Target rules for targets named intAVG
+
+# Build rule for target.
+intAVG: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 intAVG
+.PHONY : intAVG
+
+# fast build rule for target.
+intAVG/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/intAVG.dir/build.make CMakeFiles/intAVG.dir/build
+.PHONY : intAVG/fast
+
+#=============================================================================
 # Target rules for targets named jpeg_encode
 
 # Build rule for target.
@@ -338,19 +429,6 @@ lzfx_decomp/fast:
 .PHONY : lzfx_decomp/fast
 
 #=============================================================================
-# Target rules for targets named mp3_encode
-
-# Build rule for target.
-mp3_encode: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mp3_encode
-.PHONY : mp3_encode
-
-# fast build rule for target.
-mp3_encode/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3_encode.dir/build.make CMakeFiles/mp3_encode.dir/build
-.PHONY : mp3_encode/fast
-
-#=============================================================================
 # Target rules for targets named patricia
 
 # Build rule for target.
@@ -388,6 +466,19 @@ qsort: cmake_check_build_system
 qsort/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qsort.dir/build.make CMakeFiles/qsort.dir/build
 .PHONY : qsort/fast
+
+#=============================================================================
+# Target rules for targets named rle
+
+# Build rule for target.
+rle: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rle
+.PHONY : rle
+
+# fast build rule for target.
+rle/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rle.dir/build.make CMakeFiles/rle.dir/build
+.PHONY : rle/fast
 
 #=============================================================================
 # Target rules for targets named rsa
@@ -480,11 +571,30 @@ susan_smooth/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_smooth.dir/build.make CMakeFiles/susan_smooth.dir/build
 .PHONY : susan_smooth/fast
 
+#=============================================================================
+# Target rules for targets named tHold
+
+# Build rule for target.
+tHold: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tHold
+.PHONY : tHold
+
+# fast build rule for target.
+tHold/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tHold.dir/build.make CMakeFiles/tHold.dir/build
+.PHONY : tHold/fast
+
 hw/msp430/supportFuncs.o: hw/msp430/supportFuncs.c.o
 .PHONY : hw/msp430/supportFuncs.o
 
 # target to build an object file
 hw/msp430/supportFuncs.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ALU.dir/build.make CMakeFiles/ALU.dir/hw/msp430/supportFuncs.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BinSearch.dir/build.make CMakeFiles/BinSearch.dir/hw/msp430/supportFuncs.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Div.dir/build.make CMakeFiles/Div.dir/hw/msp430/supportFuncs.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/InSort.dir/build.make CMakeFiles/InSort.dir/hw/msp430/supportFuncs.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mult.dir/build.make CMakeFiles/Mult.dir/hw/msp430/supportFuncs.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tea8.dir/build.make CMakeFiles/Tea8.dir/hw/msp430/supportFuncs.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/activity_rec.dir/build.make CMakeFiles/activity_rec.dir/hw/msp430/supportFuncs.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/adpcm_encode.dir/build.make CMakeFiles/adpcm_encode.dir/hw/msp430/supportFuncs.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes.dir/build.make CMakeFiles/aes.dir/hw/msp430/supportFuncs.c.o
@@ -497,15 +607,16 @@ hw/msp430/supportFuncs.c.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecc.dir/build.make CMakeFiles/ecc.dir/hw/msp430/supportFuncs.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fft.dir/build.make CMakeFiles/fft.dir/hw/msp430/supportFuncs.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_class.dir/build.make CMakeFiles/image_class.dir/hw/msp430/supportFuncs.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/intAVG.dir/build.make CMakeFiles/intAVG.dir/hw/msp430/supportFuncs.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/jpeg_encode.dir/build.make CMakeFiles/jpeg_encode.dir/hw/msp430/supportFuncs.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lorawan_down.dir/build.make CMakeFiles/lorawan_down.dir/hw/msp430/supportFuncs.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lorawan_up.dir/build.make CMakeFiles/lorawan_up.dir/hw/msp430/supportFuncs.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lzfx_comp.dir/build.make CMakeFiles/lzfx_comp.dir/hw/msp430/supportFuncs.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lzfx_decomp.dir/build.make CMakeFiles/lzfx_decomp.dir/hw/msp430/supportFuncs.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3_encode.dir/build.make CMakeFiles/mp3_encode.dir/hw/msp430/supportFuncs.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/patricia.dir/build.make CMakeFiles/patricia.dir/hw/msp430/supportFuncs.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly1305.dir/build.make CMakeFiles/poly1305.dir/hw/msp430/supportFuncs.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qsort.dir/build.make CMakeFiles/qsort.dir/hw/msp430/supportFuncs.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rle.dir/build.make CMakeFiles/rle.dir/hw/msp430/supportFuncs.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rsa.dir/build.make CMakeFiles/rsa.dir/hw/msp430/supportFuncs.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_fusion.dir/build.make CMakeFiles/sensor_fusion.dir/hw/msp430/supportFuncs.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sha256.dir/build.make CMakeFiles/sha256.dir/hw/msp430/supportFuncs.c.o
@@ -513,6 +624,7 @@ hw/msp430/supportFuncs.c.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_corners.dir/build.make CMakeFiles/susan_corners.dir/hw/msp430/supportFuncs.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_edges.dir/build.make CMakeFiles/susan_edges.dir/hw/msp430/supportFuncs.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_smooth.dir/build.make CMakeFiles/susan_smooth.dir/hw/msp430/supportFuncs.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tHold.dir/build.make CMakeFiles/tHold.dir/hw/msp430/supportFuncs.c.o
 .PHONY : hw/msp430/supportFuncs.c.o
 
 hw/msp430/supportFuncs.i: hw/msp430/supportFuncs.c.i
@@ -520,6 +632,12 @@ hw/msp430/supportFuncs.i: hw/msp430/supportFuncs.c.i
 
 # target to preprocess a source file
 hw/msp430/supportFuncs.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ALU.dir/build.make CMakeFiles/ALU.dir/hw/msp430/supportFuncs.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BinSearch.dir/build.make CMakeFiles/BinSearch.dir/hw/msp430/supportFuncs.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Div.dir/build.make CMakeFiles/Div.dir/hw/msp430/supportFuncs.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/InSort.dir/build.make CMakeFiles/InSort.dir/hw/msp430/supportFuncs.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mult.dir/build.make CMakeFiles/Mult.dir/hw/msp430/supportFuncs.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tea8.dir/build.make CMakeFiles/Tea8.dir/hw/msp430/supportFuncs.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/activity_rec.dir/build.make CMakeFiles/activity_rec.dir/hw/msp430/supportFuncs.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/adpcm_encode.dir/build.make CMakeFiles/adpcm_encode.dir/hw/msp430/supportFuncs.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes.dir/build.make CMakeFiles/aes.dir/hw/msp430/supportFuncs.c.i
@@ -532,15 +650,16 @@ hw/msp430/supportFuncs.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecc.dir/build.make CMakeFiles/ecc.dir/hw/msp430/supportFuncs.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fft.dir/build.make CMakeFiles/fft.dir/hw/msp430/supportFuncs.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_class.dir/build.make CMakeFiles/image_class.dir/hw/msp430/supportFuncs.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/intAVG.dir/build.make CMakeFiles/intAVG.dir/hw/msp430/supportFuncs.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/jpeg_encode.dir/build.make CMakeFiles/jpeg_encode.dir/hw/msp430/supportFuncs.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lorawan_down.dir/build.make CMakeFiles/lorawan_down.dir/hw/msp430/supportFuncs.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lorawan_up.dir/build.make CMakeFiles/lorawan_up.dir/hw/msp430/supportFuncs.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lzfx_comp.dir/build.make CMakeFiles/lzfx_comp.dir/hw/msp430/supportFuncs.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lzfx_decomp.dir/build.make CMakeFiles/lzfx_decomp.dir/hw/msp430/supportFuncs.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3_encode.dir/build.make CMakeFiles/mp3_encode.dir/hw/msp430/supportFuncs.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/patricia.dir/build.make CMakeFiles/patricia.dir/hw/msp430/supportFuncs.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly1305.dir/build.make CMakeFiles/poly1305.dir/hw/msp430/supportFuncs.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qsort.dir/build.make CMakeFiles/qsort.dir/hw/msp430/supportFuncs.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rle.dir/build.make CMakeFiles/rle.dir/hw/msp430/supportFuncs.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rsa.dir/build.make CMakeFiles/rsa.dir/hw/msp430/supportFuncs.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_fusion.dir/build.make CMakeFiles/sensor_fusion.dir/hw/msp430/supportFuncs.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sha256.dir/build.make CMakeFiles/sha256.dir/hw/msp430/supportFuncs.c.i
@@ -548,6 +667,7 @@ hw/msp430/supportFuncs.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_corners.dir/build.make CMakeFiles/susan_corners.dir/hw/msp430/supportFuncs.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_edges.dir/build.make CMakeFiles/susan_edges.dir/hw/msp430/supportFuncs.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_smooth.dir/build.make CMakeFiles/susan_smooth.dir/hw/msp430/supportFuncs.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tHold.dir/build.make CMakeFiles/tHold.dir/hw/msp430/supportFuncs.c.i
 .PHONY : hw/msp430/supportFuncs.c.i
 
 hw/msp430/supportFuncs.s: hw/msp430/supportFuncs.c.s
@@ -555,6 +675,12 @@ hw/msp430/supportFuncs.s: hw/msp430/supportFuncs.c.s
 
 # target to generate assembly for a file
 hw/msp430/supportFuncs.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ALU.dir/build.make CMakeFiles/ALU.dir/hw/msp430/supportFuncs.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BinSearch.dir/build.make CMakeFiles/BinSearch.dir/hw/msp430/supportFuncs.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Div.dir/build.make CMakeFiles/Div.dir/hw/msp430/supportFuncs.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/InSort.dir/build.make CMakeFiles/InSort.dir/hw/msp430/supportFuncs.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mult.dir/build.make CMakeFiles/Mult.dir/hw/msp430/supportFuncs.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tea8.dir/build.make CMakeFiles/Tea8.dir/hw/msp430/supportFuncs.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/activity_rec.dir/build.make CMakeFiles/activity_rec.dir/hw/msp430/supportFuncs.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/adpcm_encode.dir/build.make CMakeFiles/adpcm_encode.dir/hw/msp430/supportFuncs.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes.dir/build.make CMakeFiles/aes.dir/hw/msp430/supportFuncs.c.s
@@ -567,15 +693,16 @@ hw/msp430/supportFuncs.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecc.dir/build.make CMakeFiles/ecc.dir/hw/msp430/supportFuncs.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fft.dir/build.make CMakeFiles/fft.dir/hw/msp430/supportFuncs.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_class.dir/build.make CMakeFiles/image_class.dir/hw/msp430/supportFuncs.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/intAVG.dir/build.make CMakeFiles/intAVG.dir/hw/msp430/supportFuncs.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/jpeg_encode.dir/build.make CMakeFiles/jpeg_encode.dir/hw/msp430/supportFuncs.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lorawan_down.dir/build.make CMakeFiles/lorawan_down.dir/hw/msp430/supportFuncs.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lorawan_up.dir/build.make CMakeFiles/lorawan_up.dir/hw/msp430/supportFuncs.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lzfx_comp.dir/build.make CMakeFiles/lzfx_comp.dir/hw/msp430/supportFuncs.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lzfx_decomp.dir/build.make CMakeFiles/lzfx_decomp.dir/hw/msp430/supportFuncs.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3_encode.dir/build.make CMakeFiles/mp3_encode.dir/hw/msp430/supportFuncs.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/patricia.dir/build.make CMakeFiles/patricia.dir/hw/msp430/supportFuncs.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly1305.dir/build.make CMakeFiles/poly1305.dir/hw/msp430/supportFuncs.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qsort.dir/build.make CMakeFiles/qsort.dir/hw/msp430/supportFuncs.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rle.dir/build.make CMakeFiles/rle.dir/hw/msp430/supportFuncs.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rsa.dir/build.make CMakeFiles/rsa.dir/hw/msp430/supportFuncs.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_fusion.dir/build.make CMakeFiles/sensor_fusion.dir/hw/msp430/supportFuncs.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sha256.dir/build.make CMakeFiles/sha256.dir/hw/msp430/supportFuncs.c.s
@@ -583,6 +710,7 @@ hw/msp430/supportFuncs.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_corners.dir/build.make CMakeFiles/susan_corners.dir/hw/msp430/supportFuncs.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_edges.dir/build.make CMakeFiles/susan_edges.dir/hw/msp430/supportFuncs.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_smooth.dir/build.make CMakeFiles/susan_smooth.dir/hw/msp430/supportFuncs.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tHold.dir/build.make CMakeFiles/tHold.dir/hw/msp430/supportFuncs.c.s
 .PHONY : hw/msp430/supportFuncs.c.s
 
 hw/msp430/vectors.o: hw/msp430/vectors.S.o
@@ -590,6 +718,12 @@ hw/msp430/vectors.o: hw/msp430/vectors.S.o
 
 # target to build an object file
 hw/msp430/vectors.S.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ALU.dir/build.make CMakeFiles/ALU.dir/hw/msp430/vectors.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BinSearch.dir/build.make CMakeFiles/BinSearch.dir/hw/msp430/vectors.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Div.dir/build.make CMakeFiles/Div.dir/hw/msp430/vectors.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/InSort.dir/build.make CMakeFiles/InSort.dir/hw/msp430/vectors.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mult.dir/build.make CMakeFiles/Mult.dir/hw/msp430/vectors.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tea8.dir/build.make CMakeFiles/Tea8.dir/hw/msp430/vectors.S.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/activity_rec.dir/build.make CMakeFiles/activity_rec.dir/hw/msp430/vectors.S.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/adpcm_encode.dir/build.make CMakeFiles/adpcm_encode.dir/hw/msp430/vectors.S.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes.dir/build.make CMakeFiles/aes.dir/hw/msp430/vectors.S.o
@@ -602,15 +736,16 @@ hw/msp430/vectors.S.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecc.dir/build.make CMakeFiles/ecc.dir/hw/msp430/vectors.S.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fft.dir/build.make CMakeFiles/fft.dir/hw/msp430/vectors.S.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_class.dir/build.make CMakeFiles/image_class.dir/hw/msp430/vectors.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/intAVG.dir/build.make CMakeFiles/intAVG.dir/hw/msp430/vectors.S.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/jpeg_encode.dir/build.make CMakeFiles/jpeg_encode.dir/hw/msp430/vectors.S.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lorawan_down.dir/build.make CMakeFiles/lorawan_down.dir/hw/msp430/vectors.S.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lorawan_up.dir/build.make CMakeFiles/lorawan_up.dir/hw/msp430/vectors.S.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lzfx_comp.dir/build.make CMakeFiles/lzfx_comp.dir/hw/msp430/vectors.S.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lzfx_decomp.dir/build.make CMakeFiles/lzfx_decomp.dir/hw/msp430/vectors.S.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3_encode.dir/build.make CMakeFiles/mp3_encode.dir/hw/msp430/vectors.S.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/patricia.dir/build.make CMakeFiles/patricia.dir/hw/msp430/vectors.S.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly1305.dir/build.make CMakeFiles/poly1305.dir/hw/msp430/vectors.S.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qsort.dir/build.make CMakeFiles/qsort.dir/hw/msp430/vectors.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rle.dir/build.make CMakeFiles/rle.dir/hw/msp430/vectors.S.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rsa.dir/build.make CMakeFiles/rsa.dir/hw/msp430/vectors.S.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_fusion.dir/build.make CMakeFiles/sensor_fusion.dir/hw/msp430/vectors.S.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sha256.dir/build.make CMakeFiles/sha256.dir/hw/msp430/vectors.S.o
@@ -618,7 +753,152 @@ hw/msp430/vectors.S.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_corners.dir/build.make CMakeFiles/susan_corners.dir/hw/msp430/vectors.S.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_edges.dir/build.make CMakeFiles/susan_edges.dir/hw/msp430/vectors.S.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_smooth.dir/build.make CMakeFiles/susan_smooth.dir/hw/msp430/vectors.S.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tHold.dir/build.make CMakeFiles/tHold.dir/hw/msp430/vectors.S.o
 .PHONY : hw/msp430/vectors.S.o
+
+src/ALU/source.o: src/ALU/source.c.o
+.PHONY : src/ALU/source.o
+
+# target to build an object file
+src/ALU/source.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ALU.dir/build.make CMakeFiles/ALU.dir/src/ALU/source.c.o
+.PHONY : src/ALU/source.c.o
+
+src/ALU/source.i: src/ALU/source.c.i
+.PHONY : src/ALU/source.i
+
+# target to preprocess a source file
+src/ALU/source.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ALU.dir/build.make CMakeFiles/ALU.dir/src/ALU/source.c.i
+.PHONY : src/ALU/source.c.i
+
+src/ALU/source.s: src/ALU/source.c.s
+.PHONY : src/ALU/source.s
+
+# target to generate assembly for a file
+src/ALU/source.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ALU.dir/build.make CMakeFiles/ALU.dir/src/ALU/source.c.s
+.PHONY : src/ALU/source.c.s
+
+src/BinSearch/source.o: src/BinSearch/source.c.o
+.PHONY : src/BinSearch/source.o
+
+# target to build an object file
+src/BinSearch/source.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BinSearch.dir/build.make CMakeFiles/BinSearch.dir/src/BinSearch/source.c.o
+.PHONY : src/BinSearch/source.c.o
+
+src/BinSearch/source.i: src/BinSearch/source.c.i
+.PHONY : src/BinSearch/source.i
+
+# target to preprocess a source file
+src/BinSearch/source.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BinSearch.dir/build.make CMakeFiles/BinSearch.dir/src/BinSearch/source.c.i
+.PHONY : src/BinSearch/source.c.i
+
+src/BinSearch/source.s: src/BinSearch/source.c.s
+.PHONY : src/BinSearch/source.s
+
+# target to generate assembly for a file
+src/BinSearch/source.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BinSearch.dir/build.make CMakeFiles/BinSearch.dir/src/BinSearch/source.c.s
+.PHONY : src/BinSearch/source.c.s
+
+src/Div/source.o: src/Div/source.c.o
+.PHONY : src/Div/source.o
+
+# target to build an object file
+src/Div/source.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Div.dir/build.make CMakeFiles/Div.dir/src/Div/source.c.o
+.PHONY : src/Div/source.c.o
+
+src/Div/source.i: src/Div/source.c.i
+.PHONY : src/Div/source.i
+
+# target to preprocess a source file
+src/Div/source.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Div.dir/build.make CMakeFiles/Div.dir/src/Div/source.c.i
+.PHONY : src/Div/source.c.i
+
+src/Div/source.s: src/Div/source.c.s
+.PHONY : src/Div/source.s
+
+# target to generate assembly for a file
+src/Div/source.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Div.dir/build.make CMakeFiles/Div.dir/src/Div/source.c.s
+.PHONY : src/Div/source.c.s
+
+src/InSort/source.o: src/InSort/source.c.o
+.PHONY : src/InSort/source.o
+
+# target to build an object file
+src/InSort/source.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/InSort.dir/build.make CMakeFiles/InSort.dir/src/InSort/source.c.o
+.PHONY : src/InSort/source.c.o
+
+src/InSort/source.i: src/InSort/source.c.i
+.PHONY : src/InSort/source.i
+
+# target to preprocess a source file
+src/InSort/source.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/InSort.dir/build.make CMakeFiles/InSort.dir/src/InSort/source.c.i
+.PHONY : src/InSort/source.c.i
+
+src/InSort/source.s: src/InSort/source.c.s
+.PHONY : src/InSort/source.s
+
+# target to generate assembly for a file
+src/InSort/source.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/InSort.dir/build.make CMakeFiles/InSort.dir/src/InSort/source.c.s
+.PHONY : src/InSort/source.c.s
+
+src/Mult/source.o: src/Mult/source.c.o
+.PHONY : src/Mult/source.o
+
+# target to build an object file
+src/Mult/source.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mult.dir/build.make CMakeFiles/Mult.dir/src/Mult/source.c.o
+.PHONY : src/Mult/source.c.o
+
+src/Mult/source.i: src/Mult/source.c.i
+.PHONY : src/Mult/source.i
+
+# target to preprocess a source file
+src/Mult/source.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mult.dir/build.make CMakeFiles/Mult.dir/src/Mult/source.c.i
+.PHONY : src/Mult/source.c.i
+
+src/Mult/source.s: src/Mult/source.c.s
+.PHONY : src/Mult/source.s
+
+# target to generate assembly for a file
+src/Mult/source.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mult.dir/build.make CMakeFiles/Mult.dir/src/Mult/source.c.s
+.PHONY : src/Mult/source.c.s
+
+src/Tea8/source.o: src/Tea8/source.c.o
+.PHONY : src/Tea8/source.o
+
+# target to build an object file
+src/Tea8/source.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tea8.dir/build.make CMakeFiles/Tea8.dir/src/Tea8/source.c.o
+.PHONY : src/Tea8/source.c.o
+
+src/Tea8/source.i: src/Tea8/source.c.i
+.PHONY : src/Tea8/source.i
+
+# target to preprocess a source file
+src/Tea8/source.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tea8.dir/build.make CMakeFiles/Tea8.dir/src/Tea8/source.c.i
+.PHONY : src/Tea8/source.c.i
+
+src/Tea8/source.s: src/Tea8/source.c.s
+.PHONY : src/Tea8/source.s
+
+# target to generate assembly for a file
+src/Tea8/source.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tea8.dir/build.make CMakeFiles/Tea8.dir/src/Tea8/source.c.s
+.PHONY : src/Tea8/source.c.s
 
 src/activity_rec/main.o: src/activity_rec/main.c.o
 .PHONY : src/activity_rec/main.o
@@ -1033,6 +1313,12 @@ src/common.o: src/common.c.o
 
 # target to build an object file
 src/common.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ALU.dir/build.make CMakeFiles/ALU.dir/src/common.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BinSearch.dir/build.make CMakeFiles/BinSearch.dir/src/common.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Div.dir/build.make CMakeFiles/Div.dir/src/common.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/InSort.dir/build.make CMakeFiles/InSort.dir/src/common.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mult.dir/build.make CMakeFiles/Mult.dir/src/common.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tea8.dir/build.make CMakeFiles/Tea8.dir/src/common.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/activity_rec.dir/build.make CMakeFiles/activity_rec.dir/src/common.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/adpcm_encode.dir/build.make CMakeFiles/adpcm_encode.dir/src/common.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes.dir/build.make CMakeFiles/aes.dir/src/common.c.o
@@ -1045,15 +1331,16 @@ src/common.c.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecc.dir/build.make CMakeFiles/ecc.dir/src/common.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fft.dir/build.make CMakeFiles/fft.dir/src/common.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_class.dir/build.make CMakeFiles/image_class.dir/src/common.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/intAVG.dir/build.make CMakeFiles/intAVG.dir/src/common.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/jpeg_encode.dir/build.make CMakeFiles/jpeg_encode.dir/src/common.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lorawan_down.dir/build.make CMakeFiles/lorawan_down.dir/src/common.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lorawan_up.dir/build.make CMakeFiles/lorawan_up.dir/src/common.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lzfx_comp.dir/build.make CMakeFiles/lzfx_comp.dir/src/common.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lzfx_decomp.dir/build.make CMakeFiles/lzfx_decomp.dir/src/common.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3_encode.dir/build.make CMakeFiles/mp3_encode.dir/src/common.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/patricia.dir/build.make CMakeFiles/patricia.dir/src/common.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly1305.dir/build.make CMakeFiles/poly1305.dir/src/common.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qsort.dir/build.make CMakeFiles/qsort.dir/src/common.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rle.dir/build.make CMakeFiles/rle.dir/src/common.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rsa.dir/build.make CMakeFiles/rsa.dir/src/common.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_fusion.dir/build.make CMakeFiles/sensor_fusion.dir/src/common.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sha256.dir/build.make CMakeFiles/sha256.dir/src/common.c.o
@@ -1061,6 +1348,7 @@ src/common.c.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_corners.dir/build.make CMakeFiles/susan_corners.dir/src/common.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_edges.dir/build.make CMakeFiles/susan_edges.dir/src/common.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_smooth.dir/build.make CMakeFiles/susan_smooth.dir/src/common.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tHold.dir/build.make CMakeFiles/tHold.dir/src/common.c.o
 .PHONY : src/common.c.o
 
 src/common.i: src/common.c.i
@@ -1068,6 +1356,12 @@ src/common.i: src/common.c.i
 
 # target to preprocess a source file
 src/common.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ALU.dir/build.make CMakeFiles/ALU.dir/src/common.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BinSearch.dir/build.make CMakeFiles/BinSearch.dir/src/common.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Div.dir/build.make CMakeFiles/Div.dir/src/common.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/InSort.dir/build.make CMakeFiles/InSort.dir/src/common.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mult.dir/build.make CMakeFiles/Mult.dir/src/common.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tea8.dir/build.make CMakeFiles/Tea8.dir/src/common.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/activity_rec.dir/build.make CMakeFiles/activity_rec.dir/src/common.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/adpcm_encode.dir/build.make CMakeFiles/adpcm_encode.dir/src/common.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes.dir/build.make CMakeFiles/aes.dir/src/common.c.i
@@ -1080,15 +1374,16 @@ src/common.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecc.dir/build.make CMakeFiles/ecc.dir/src/common.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fft.dir/build.make CMakeFiles/fft.dir/src/common.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_class.dir/build.make CMakeFiles/image_class.dir/src/common.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/intAVG.dir/build.make CMakeFiles/intAVG.dir/src/common.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/jpeg_encode.dir/build.make CMakeFiles/jpeg_encode.dir/src/common.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lorawan_down.dir/build.make CMakeFiles/lorawan_down.dir/src/common.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lorawan_up.dir/build.make CMakeFiles/lorawan_up.dir/src/common.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lzfx_comp.dir/build.make CMakeFiles/lzfx_comp.dir/src/common.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lzfx_decomp.dir/build.make CMakeFiles/lzfx_decomp.dir/src/common.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3_encode.dir/build.make CMakeFiles/mp3_encode.dir/src/common.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/patricia.dir/build.make CMakeFiles/patricia.dir/src/common.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly1305.dir/build.make CMakeFiles/poly1305.dir/src/common.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qsort.dir/build.make CMakeFiles/qsort.dir/src/common.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rle.dir/build.make CMakeFiles/rle.dir/src/common.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rsa.dir/build.make CMakeFiles/rsa.dir/src/common.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_fusion.dir/build.make CMakeFiles/sensor_fusion.dir/src/common.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sha256.dir/build.make CMakeFiles/sha256.dir/src/common.c.i
@@ -1096,6 +1391,7 @@ src/common.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_corners.dir/build.make CMakeFiles/susan_corners.dir/src/common.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_edges.dir/build.make CMakeFiles/susan_edges.dir/src/common.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_smooth.dir/build.make CMakeFiles/susan_smooth.dir/src/common.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tHold.dir/build.make CMakeFiles/tHold.dir/src/common.c.i
 .PHONY : src/common.c.i
 
 src/common.s: src/common.c.s
@@ -1103,6 +1399,12 @@ src/common.s: src/common.c.s
 
 # target to generate assembly for a file
 src/common.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ALU.dir/build.make CMakeFiles/ALU.dir/src/common.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BinSearch.dir/build.make CMakeFiles/BinSearch.dir/src/common.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Div.dir/build.make CMakeFiles/Div.dir/src/common.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/InSort.dir/build.make CMakeFiles/InSort.dir/src/common.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mult.dir/build.make CMakeFiles/Mult.dir/src/common.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tea8.dir/build.make CMakeFiles/Tea8.dir/src/common.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/activity_rec.dir/build.make CMakeFiles/activity_rec.dir/src/common.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/adpcm_encode.dir/build.make CMakeFiles/adpcm_encode.dir/src/common.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes.dir/build.make CMakeFiles/aes.dir/src/common.c.s
@@ -1115,15 +1417,16 @@ src/common.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecc.dir/build.make CMakeFiles/ecc.dir/src/common.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fft.dir/build.make CMakeFiles/fft.dir/src/common.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_class.dir/build.make CMakeFiles/image_class.dir/src/common.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/intAVG.dir/build.make CMakeFiles/intAVG.dir/src/common.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/jpeg_encode.dir/build.make CMakeFiles/jpeg_encode.dir/src/common.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lorawan_down.dir/build.make CMakeFiles/lorawan_down.dir/src/common.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lorawan_up.dir/build.make CMakeFiles/lorawan_up.dir/src/common.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lzfx_comp.dir/build.make CMakeFiles/lzfx_comp.dir/src/common.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lzfx_decomp.dir/build.make CMakeFiles/lzfx_decomp.dir/src/common.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3_encode.dir/build.make CMakeFiles/mp3_encode.dir/src/common.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/patricia.dir/build.make CMakeFiles/patricia.dir/src/common.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly1305.dir/build.make CMakeFiles/poly1305.dir/src/common.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qsort.dir/build.make CMakeFiles/qsort.dir/src/common.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rle.dir/build.make CMakeFiles/rle.dir/src/common.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rsa.dir/build.make CMakeFiles/rsa.dir/src/common.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_fusion.dir/build.make CMakeFiles/sensor_fusion.dir/src/common.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sha256.dir/build.make CMakeFiles/sha256.dir/src/common.c.s
@@ -1131,6 +1434,7 @@ src/common.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_corners.dir/build.make CMakeFiles/susan_corners.dir/src/common.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_edges.dir/build.make CMakeFiles/susan_edges.dir/src/common.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_smooth.dir/build.make CMakeFiles/susan_smooth.dir/src/common.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tHold.dir/build.make CMakeFiles/tHold.dir/src/common.c.s
 .PHONY : src/common.c.s
 
 src/crc/crc.o: src/crc/crc.c.o
@@ -1420,6 +1724,30 @@ src/image_class/tm_stat.s: src/image_class/tm_stat.c.s
 src/image_class/tm_stat.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_class.dir/build.make CMakeFiles/image_class.dir/src/image_class/tm_stat.c.s
 .PHONY : src/image_class/tm_stat.c.s
+
+src/intAVG/source.o: src/intAVG/source.c.o
+.PHONY : src/intAVG/source.o
+
+# target to build an object file
+src/intAVG/source.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/intAVG.dir/build.make CMakeFiles/intAVG.dir/src/intAVG/source.c.o
+.PHONY : src/intAVG/source.c.o
+
+src/intAVG/source.i: src/intAVG/source.c.i
+.PHONY : src/intAVG/source.i
+
+# target to preprocess a source file
+src/intAVG/source.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/intAVG.dir/build.make CMakeFiles/intAVG.dir/src/intAVG/source.c.i
+.PHONY : src/intAVG/source.c.i
+
+src/intAVG/source.s: src/intAVG/source.c.s
+.PHONY : src/intAVG/source.s
+
+# target to generate assembly for a file
+src/intAVG/source.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/intAVG.dir/build.make CMakeFiles/intAVG.dir/src/intAVG/source.c.s
+.PHONY : src/intAVG/source.c.s
 
 src/jpeg_encode/buf.o: src/jpeg_encode/buf.c.o
 .PHONY : src/jpeg_encode/buf.o
@@ -1858,6 +2186,12 @@ src/mainmain.o: src/mainmain.c.o
 
 # target to build an object file
 src/mainmain.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ALU.dir/build.make CMakeFiles/ALU.dir/src/mainmain.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BinSearch.dir/build.make CMakeFiles/BinSearch.dir/src/mainmain.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Div.dir/build.make CMakeFiles/Div.dir/src/mainmain.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/InSort.dir/build.make CMakeFiles/InSort.dir/src/mainmain.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mult.dir/build.make CMakeFiles/Mult.dir/src/mainmain.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tea8.dir/build.make CMakeFiles/Tea8.dir/src/mainmain.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/activity_rec.dir/build.make CMakeFiles/activity_rec.dir/src/mainmain.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/adpcm_encode.dir/build.make CMakeFiles/adpcm_encode.dir/src/mainmain.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes.dir/build.make CMakeFiles/aes.dir/src/mainmain.c.o
@@ -1870,15 +2204,16 @@ src/mainmain.c.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecc.dir/build.make CMakeFiles/ecc.dir/src/mainmain.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fft.dir/build.make CMakeFiles/fft.dir/src/mainmain.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_class.dir/build.make CMakeFiles/image_class.dir/src/mainmain.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/intAVG.dir/build.make CMakeFiles/intAVG.dir/src/mainmain.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/jpeg_encode.dir/build.make CMakeFiles/jpeg_encode.dir/src/mainmain.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lorawan_down.dir/build.make CMakeFiles/lorawan_down.dir/src/mainmain.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lorawan_up.dir/build.make CMakeFiles/lorawan_up.dir/src/mainmain.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lzfx_comp.dir/build.make CMakeFiles/lzfx_comp.dir/src/mainmain.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lzfx_decomp.dir/build.make CMakeFiles/lzfx_decomp.dir/src/mainmain.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3_encode.dir/build.make CMakeFiles/mp3_encode.dir/src/mainmain.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/patricia.dir/build.make CMakeFiles/patricia.dir/src/mainmain.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly1305.dir/build.make CMakeFiles/poly1305.dir/src/mainmain.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qsort.dir/build.make CMakeFiles/qsort.dir/src/mainmain.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rle.dir/build.make CMakeFiles/rle.dir/src/mainmain.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rsa.dir/build.make CMakeFiles/rsa.dir/src/mainmain.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_fusion.dir/build.make CMakeFiles/sensor_fusion.dir/src/mainmain.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sha256.dir/build.make CMakeFiles/sha256.dir/src/mainmain.c.o
@@ -1886,6 +2221,7 @@ src/mainmain.c.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_corners.dir/build.make CMakeFiles/susan_corners.dir/src/mainmain.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_edges.dir/build.make CMakeFiles/susan_edges.dir/src/mainmain.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_smooth.dir/build.make CMakeFiles/susan_smooth.dir/src/mainmain.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tHold.dir/build.make CMakeFiles/tHold.dir/src/mainmain.c.o
 .PHONY : src/mainmain.c.o
 
 src/mainmain.i: src/mainmain.c.i
@@ -1893,6 +2229,12 @@ src/mainmain.i: src/mainmain.c.i
 
 # target to preprocess a source file
 src/mainmain.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ALU.dir/build.make CMakeFiles/ALU.dir/src/mainmain.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BinSearch.dir/build.make CMakeFiles/BinSearch.dir/src/mainmain.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Div.dir/build.make CMakeFiles/Div.dir/src/mainmain.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/InSort.dir/build.make CMakeFiles/InSort.dir/src/mainmain.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mult.dir/build.make CMakeFiles/Mult.dir/src/mainmain.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tea8.dir/build.make CMakeFiles/Tea8.dir/src/mainmain.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/activity_rec.dir/build.make CMakeFiles/activity_rec.dir/src/mainmain.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/adpcm_encode.dir/build.make CMakeFiles/adpcm_encode.dir/src/mainmain.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes.dir/build.make CMakeFiles/aes.dir/src/mainmain.c.i
@@ -1905,15 +2247,16 @@ src/mainmain.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecc.dir/build.make CMakeFiles/ecc.dir/src/mainmain.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fft.dir/build.make CMakeFiles/fft.dir/src/mainmain.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_class.dir/build.make CMakeFiles/image_class.dir/src/mainmain.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/intAVG.dir/build.make CMakeFiles/intAVG.dir/src/mainmain.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/jpeg_encode.dir/build.make CMakeFiles/jpeg_encode.dir/src/mainmain.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lorawan_down.dir/build.make CMakeFiles/lorawan_down.dir/src/mainmain.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lorawan_up.dir/build.make CMakeFiles/lorawan_up.dir/src/mainmain.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lzfx_comp.dir/build.make CMakeFiles/lzfx_comp.dir/src/mainmain.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lzfx_decomp.dir/build.make CMakeFiles/lzfx_decomp.dir/src/mainmain.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3_encode.dir/build.make CMakeFiles/mp3_encode.dir/src/mainmain.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/patricia.dir/build.make CMakeFiles/patricia.dir/src/mainmain.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly1305.dir/build.make CMakeFiles/poly1305.dir/src/mainmain.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qsort.dir/build.make CMakeFiles/qsort.dir/src/mainmain.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rle.dir/build.make CMakeFiles/rle.dir/src/mainmain.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rsa.dir/build.make CMakeFiles/rsa.dir/src/mainmain.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_fusion.dir/build.make CMakeFiles/sensor_fusion.dir/src/mainmain.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sha256.dir/build.make CMakeFiles/sha256.dir/src/mainmain.c.i
@@ -1921,6 +2264,7 @@ src/mainmain.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_corners.dir/build.make CMakeFiles/susan_corners.dir/src/mainmain.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_edges.dir/build.make CMakeFiles/susan_edges.dir/src/mainmain.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_smooth.dir/build.make CMakeFiles/susan_smooth.dir/src/mainmain.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tHold.dir/build.make CMakeFiles/tHold.dir/src/mainmain.c.i
 .PHONY : src/mainmain.c.i
 
 src/mainmain.s: src/mainmain.c.s
@@ -1928,6 +2272,12 @@ src/mainmain.s: src/mainmain.c.s
 
 # target to generate assembly for a file
 src/mainmain.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ALU.dir/build.make CMakeFiles/ALU.dir/src/mainmain.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BinSearch.dir/build.make CMakeFiles/BinSearch.dir/src/mainmain.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Div.dir/build.make CMakeFiles/Div.dir/src/mainmain.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/InSort.dir/build.make CMakeFiles/InSort.dir/src/mainmain.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mult.dir/build.make CMakeFiles/Mult.dir/src/mainmain.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Tea8.dir/build.make CMakeFiles/Tea8.dir/src/mainmain.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/activity_rec.dir/build.make CMakeFiles/activity_rec.dir/src/mainmain.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/adpcm_encode.dir/build.make CMakeFiles/adpcm_encode.dir/src/mainmain.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/aes.dir/build.make CMakeFiles/aes.dir/src/mainmain.c.s
@@ -1940,15 +2290,16 @@ src/mainmain.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ecc.dir/build.make CMakeFiles/ecc.dir/src/mainmain.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fft.dir/build.make CMakeFiles/fft.dir/src/mainmain.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/image_class.dir/build.make CMakeFiles/image_class.dir/src/mainmain.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/intAVG.dir/build.make CMakeFiles/intAVG.dir/src/mainmain.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/jpeg_encode.dir/build.make CMakeFiles/jpeg_encode.dir/src/mainmain.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lorawan_down.dir/build.make CMakeFiles/lorawan_down.dir/src/mainmain.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lorawan_up.dir/build.make CMakeFiles/lorawan_up.dir/src/mainmain.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lzfx_comp.dir/build.make CMakeFiles/lzfx_comp.dir/src/mainmain.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lzfx_decomp.dir/build.make CMakeFiles/lzfx_decomp.dir/src/mainmain.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3_encode.dir/build.make CMakeFiles/mp3_encode.dir/src/mainmain.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/patricia.dir/build.make CMakeFiles/patricia.dir/src/mainmain.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly1305.dir/build.make CMakeFiles/poly1305.dir/src/mainmain.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qsort.dir/build.make CMakeFiles/qsort.dir/src/mainmain.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rle.dir/build.make CMakeFiles/rle.dir/src/mainmain.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/rsa.dir/build.make CMakeFiles/rsa.dir/src/mainmain.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_fusion.dir/build.make CMakeFiles/sensor_fusion.dir/src/mainmain.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sha256.dir/build.make CMakeFiles/sha256.dir/src/mainmain.c.s
@@ -1956,55 +2307,8 @@ src/mainmain.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_corners.dir/build.make CMakeFiles/susan_corners.dir/src/mainmain.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_edges.dir/build.make CMakeFiles/susan_edges.dir/src/mainmain.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_smooth.dir/build.make CMakeFiles/susan_smooth.dir/src/mainmain.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tHold.dir/build.make CMakeFiles/tHold.dir/src/mainmain.c.s
 .PHONY : src/mainmain.c.s
-
-src/mp3_encode/mp3_encode_test.o: src/mp3_encode/mp3_encode_test.c.o
-.PHONY : src/mp3_encode/mp3_encode_test.o
-
-# target to build an object file
-src/mp3_encode/mp3_encode_test.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3_encode.dir/build.make CMakeFiles/mp3_encode.dir/src/mp3_encode/mp3_encode_test.c.o
-.PHONY : src/mp3_encode/mp3_encode_test.c.o
-
-src/mp3_encode/mp3_encode_test.i: src/mp3_encode/mp3_encode_test.c.i
-.PHONY : src/mp3_encode/mp3_encode_test.i
-
-# target to preprocess a source file
-src/mp3_encode/mp3_encode_test.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3_encode.dir/build.make CMakeFiles/mp3_encode.dir/src/mp3_encode/mp3_encode_test.c.i
-.PHONY : src/mp3_encode/mp3_encode_test.c.i
-
-src/mp3_encode/mp3_encode_test.s: src/mp3_encode/mp3_encode_test.c.s
-.PHONY : src/mp3_encode/mp3_encode_test.s
-
-# target to generate assembly for a file
-src/mp3_encode/mp3_encode_test.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3_encode.dir/build.make CMakeFiles/mp3_encode.dir/src/mp3_encode/mp3_encode_test.c.s
-.PHONY : src/mp3_encode/mp3_encode_test.c.s
-
-src/mp3_encode/shine_mp3.o: src/mp3_encode/shine_mp3.c.o
-.PHONY : src/mp3_encode/shine_mp3.o
-
-# target to build an object file
-src/mp3_encode/shine_mp3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3_encode.dir/build.make CMakeFiles/mp3_encode.dir/src/mp3_encode/shine_mp3.c.o
-.PHONY : src/mp3_encode/shine_mp3.c.o
-
-src/mp3_encode/shine_mp3.i: src/mp3_encode/shine_mp3.c.i
-.PHONY : src/mp3_encode/shine_mp3.i
-
-# target to preprocess a source file
-src/mp3_encode/shine_mp3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3_encode.dir/build.make CMakeFiles/mp3_encode.dir/src/mp3_encode/shine_mp3.c.i
-.PHONY : src/mp3_encode/shine_mp3.c.i
-
-src/mp3_encode/shine_mp3.s: src/mp3_encode/shine_mp3.c.s
-.PHONY : src/mp3_encode/shine_mp3.s
-
-# target to generate assembly for a file
-src/mp3_encode/shine_mp3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mp3_encode.dir/build.make CMakeFiles/mp3_encode.dir/src/mp3_encode/shine_mp3.c.s
-.PHONY : src/mp3_encode/shine_mp3.c.s
 
 src/patricia/patricia.o: src/patricia/patricia.c.o
 .PHONY : src/patricia/patricia.o
@@ -2125,6 +2429,30 @@ src/qsort/qsort.s: src/qsort/qsort.c.s
 src/qsort/qsort.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qsort.dir/build.make CMakeFiles/qsort.dir/src/qsort/qsort.c.s
 .PHONY : src/qsort/qsort.c.s
+
+src/rle/source.o: src/rle/source.c.o
+.PHONY : src/rle/source.o
+
+# target to build an object file
+src/rle/source.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rle.dir/build.make CMakeFiles/rle.dir/src/rle/source.c.o
+.PHONY : src/rle/source.c.o
+
+src/rle/source.i: src/rle/source.c.i
+.PHONY : src/rle/source.i
+
+# target to preprocess a source file
+src/rle/source.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rle.dir/build.make CMakeFiles/rle.dir/src/rle/source.c.i
+.PHONY : src/rle/source.c.i
+
+src/rle/source.s: src/rle/source.c.s
+.PHONY : src/rle/source.s
+
+# target to generate assembly for a file
+src/rle/source.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/rle.dir/build.make CMakeFiles/rle.dir/src/rle/source.c.s
+.PHONY : src/rle/source.c.s
 
 src/rsa/bn.o: src/rsa/bn.c.o
 .PHONY : src/rsa/bn.o
@@ -2366,6 +2694,30 @@ src/susan_smooth/susan.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/susan_smooth.dir/build.make CMakeFiles/susan_smooth.dir/src/susan_smooth/susan.c.s
 .PHONY : src/susan_smooth/susan.c.s
 
+src/tHold/source.o: src/tHold/source.c.o
+.PHONY : src/tHold/source.o
+
+# target to build an object file
+src/tHold/source.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tHold.dir/build.make CMakeFiles/tHold.dir/src/tHold/source.c.o
+.PHONY : src/tHold/source.c.o
+
+src/tHold/source.i: src/tHold/source.c.i
+.PHONY : src/tHold/source.i
+
+# target to preprocess a source file
+src/tHold/source.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tHold.dir/build.make CMakeFiles/tHold.dir/src/tHold/source.c.i
+.PHONY : src/tHold/source.c.i
+
+src/tHold/source.s: src/tHold/source.c.s
+.PHONY : src/tHold/source.s
+
+# target to generate assembly for a file
+src/tHold/source.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tHold.dir/build.make CMakeFiles/tHold.dir/src/tHold/source.c.s
+.PHONY : src/tHold/source.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2374,6 +2726,12 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... ALU"
+	@echo "... BinSearch"
+	@echo "... Div"
+	@echo "... InSort"
+	@echo "... Mult"
+	@echo "... Tea8"
 	@echo "... activity_rec"
 	@echo "... adpcm_encode"
 	@echo "... aes"
@@ -2386,15 +2744,16 @@ help:
 	@echo "... ecc"
 	@echo "... fft"
 	@echo "... image_class"
+	@echo "... intAVG"
 	@echo "... jpeg_encode"
 	@echo "... lorawan_down"
 	@echo "... lorawan_up"
 	@echo "... lzfx_comp"
 	@echo "... lzfx_decomp"
-	@echo "... mp3_encode"
 	@echo "... patricia"
 	@echo "... poly1305"
 	@echo "... qsort"
+	@echo "... rle"
 	@echo "... rsa"
 	@echo "... sensor_fusion"
 	@echo "... sha256"
@@ -2402,10 +2761,29 @@ help:
 	@echo "... susan_corners"
 	@echo "... susan_edges"
 	@echo "... susan_smooth"
+	@echo "... tHold"
 	@echo "... hw/msp430/supportFuncs.o"
 	@echo "... hw/msp430/supportFuncs.i"
 	@echo "... hw/msp430/supportFuncs.s"
 	@echo "... hw/msp430/vectors.o"
+	@echo "... src/ALU/source.o"
+	@echo "... src/ALU/source.i"
+	@echo "... src/ALU/source.s"
+	@echo "... src/BinSearch/source.o"
+	@echo "... src/BinSearch/source.i"
+	@echo "... src/BinSearch/source.s"
+	@echo "... src/Div/source.o"
+	@echo "... src/Div/source.i"
+	@echo "... src/Div/source.s"
+	@echo "... src/InSort/source.o"
+	@echo "... src/InSort/source.i"
+	@echo "... src/InSort/source.s"
+	@echo "... src/Mult/source.o"
+	@echo "... src/Mult/source.i"
+	@echo "... src/Mult/source.s"
+	@echo "... src/Tea8/source.o"
+	@echo "... src/Tea8/source.i"
+	@echo "... src/Tea8/source.s"
 	@echo "... src/activity_rec/main.o"
 	@echo "... src/activity_rec/main.i"
 	@echo "... src/activity_rec/main.s"
@@ -2496,6 +2874,9 @@ help:
 	@echo "... src/image_class/tm_stat.o"
 	@echo "... src/image_class/tm_stat.i"
 	@echo "... src/image_class/tm_stat.s"
+	@echo "... src/intAVG/source.o"
+	@echo "... src/intAVG/source.i"
+	@echo "... src/intAVG/source.s"
 	@echo "... src/jpeg_encode/buf.o"
 	@echo "... src/jpeg_encode/buf.i"
 	@echo "... src/jpeg_encode/buf.s"
@@ -2553,12 +2934,6 @@ help:
 	@echo "... src/mainmain.o"
 	@echo "... src/mainmain.i"
 	@echo "... src/mainmain.s"
-	@echo "... src/mp3_encode/mp3_encode_test.o"
-	@echo "... src/mp3_encode/mp3_encode_test.i"
-	@echo "... src/mp3_encode/mp3_encode_test.s"
-	@echo "... src/mp3_encode/shine_mp3.o"
-	@echo "... src/mp3_encode/shine_mp3.i"
-	@echo "... src/mp3_encode/shine_mp3.s"
 	@echo "... src/patricia/patricia.o"
 	@echo "... src/patricia/patricia.i"
 	@echo "... src/patricia/patricia.s"
@@ -2574,6 +2949,9 @@ help:
 	@echo "... src/qsort/qsort.o"
 	@echo "... src/qsort/qsort.i"
 	@echo "... src/qsort/qsort.s"
+	@echo "... src/rle/source.o"
+	@echo "... src/rle/source.i"
+	@echo "... src/rle/source.s"
 	@echo "... src/rsa/bn.o"
 	@echo "... src/rsa/bn.i"
 	@echo "... src/rsa/bn.s"
@@ -2604,6 +2982,9 @@ help:
 	@echo "... src/susan_smooth/susan.o"
 	@echo "... src/susan_smooth/susan.i"
 	@echo "... src/susan_smooth/susan.s"
+	@echo "... src/tHold/source.o"
+	@echo "... src/tHold/source.i"
+	@echo "... src/tHold/source.s"
 .PHONY : help
 
 

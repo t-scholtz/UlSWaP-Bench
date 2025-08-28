@@ -1,21 +1,21 @@
 #include <msp430.h>
 
-/* MMIO Addresses for simulation control */
-#define SIM_END      0xFFD8    /* Simulation end signal */
+#define SIM_END 0x0006
 
 .section .resetvec,"ax"
-.word rst                     
+.word 0x4000
+
 .extern _start
 
-.section .text                 
+.section .rstjmp,"ax"
 .global rst
 rst:
-  MOV #WDTPW|WDTHOLD, &WDTCTL  /* Disable watchdog timer */
-  br #_start                   /* Branch to picolibc startup */
+  jmp _start
 
 .global _exit
 _exit:
-  MOV #0xDEAD, &SIM_END       /* Sudo Ebreak - signal simulation end */
-  
-_exit_loop:                   
-  br #_exit_loop              /* Infinite loop */
+    mov.w   #0xDEAD, &SIM_END   /* Signal simulation end */
+    nop
+_exit_loop:
+    jmp     _exit_loop          /* Infinite loop */
+

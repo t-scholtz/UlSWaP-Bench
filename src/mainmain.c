@@ -10,10 +10,6 @@ int benchmark_main(void);
 
 int main(void)
 {
-#ifdef CUSTOM_ARCH_STARTUP
-    run_arch_startup();
-#endif  // CUSTOM_ARCH_STARTUP
-
     for (int run = 0; run < RUNS; ++run)
     {
         benchmark_main();

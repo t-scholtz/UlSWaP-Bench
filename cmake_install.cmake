@@ -44,6 +44,36 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/tjscholtz/Desktop/UlSWaP-Bench/src/ALU/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/tjscholtz/Desktop/UlSWaP-Bench/src/BinSearch/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/tjscholtz/Desktop/UlSWaP-Bench/src/Div/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/tjscholtz/Desktop/UlSWaP-Bench/src/InSort/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/tjscholtz/Desktop/UlSWaP-Bench/src/Mult/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/tjscholtz/Desktop/UlSWaP-Bench/src/Tea8/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/tjscholtz/Desktop/UlSWaP-Bench/src/activity_rec/cmake_install.cmake")
 endif()
 
@@ -104,6 +134,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/tjscholtz/Desktop/UlSWaP-Bench/src/intAVG/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/tjscholtz/Desktop/UlSWaP-Bench/src/jpeg_encode/cmake_install.cmake")
 endif()
 
@@ -129,11 +164,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/tjscholtz/Desktop/UlSWaP-Bench/src/mp3_encode/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
   include("/home/tjscholtz/Desktop/UlSWaP-Bench/src/patricia/cmake_install.cmake")
 endif()
 
@@ -145,6 +175,11 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("/home/tjscholtz/Desktop/UlSWaP-Bench/src/qsort/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/tjscholtz/Desktop/UlSWaP-Bench/src/rle/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
@@ -180,6 +215,11 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
   include("/home/tjscholtz/Desktop/UlSWaP-Bench/src/susan_smooth/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/tjscholtz/Desktop/UlSWaP-Bench/src/tHold/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
