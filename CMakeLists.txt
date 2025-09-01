@@ -11,6 +11,9 @@ if(NOT ARCH)
     message("Available platforms: ${available_architectures}")
 endif()
 
+string(TOUPPER ${ARCH} ARCH_UPPER)
+add_compile_definitions(ARCH_${ARCH_UPPER})
+
 # Make sure all specified architectures are valid
 if(NOT ${ARCH} IN_LIST available_architectures)
     message(FATAL_ERROR "Hardware platform ${ARCH} is not available")

@@ -16,6 +16,9 @@ __pmem_base   = 0x10000 - __pmem_size;    /* PMEM extends down from vector table
 
 PROVIDE (__stack = __dmem_base + __dmem_size);
 
+PROVIDE(_Exit = _exit);
+PROVIDE(__exit = _exit);
+
 INCLUDE picolibc.ld
 
 /* Memory map */
@@ -61,12 +64,14 @@ SECTIONS {
 
   /* Program sections */
   .text : {
-    /* Ensure _start comes first */
-    KEEP(*(.text._start))
-    *(.text)
-    *(.text.*)
-    . = ALIGN(2);
-    __text_end = .;
+      /* Ensure _start comes first */
+      KEEP(*(.text._start))
+      /* Ensure _exit is included */
+      KEEP(*(.text._exit))
+      *(.text)
+      *(.text.*)
+      . = ALIGN(2);
+      __text_end = .;
   } > PMEM
 
   /* Read-only data */
