@@ -17,4 +17,6 @@ void benchmark_main() {
             putchar_uart(0);
         }
     }
+
+    return;
 }

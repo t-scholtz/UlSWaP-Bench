@@ -11,23 +11,18 @@ void print_hash(uint8_t *hash) {
     for (int i = 0; i < DIGEST_BYTES; i++) {
         putchar_uart(hash[i]);
     }
-    /* optional newline */
-    putchar_uart('\n');
 }
 
 /* entry point used by your test harness */
-int benchmark_main(int argc, char *argv[]) {
-    (void)argc; (void)argv;
+int benchmark_main() {
 
     SHA256_CTX ctx;
     uint8_t hash[DIGEST_BYTES];
     unsigned char data[256];
 
-    /* Read exactly 256 bytes from stdin (getchar() -> your getchar_uart) */
     for (int i = 0; i < 256; ++i) {
         int c = getchar_uart();
         data[i] = (unsigned char)c;
-        putchar_uart(data[i]); 
     }
 
     sha256_init(&ctx);
